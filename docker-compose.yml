@@ -6,6 +6,7 @@ services:
     container_name: ${SVC_HUGO_CONTAINERNAME}
     environment:
       - "HUGO_DIR=${HUGO_DIR}"
+      - "HUGO_PORT=${HUGO_PORT}"
       - "HUGO_URL=${HUGO_URL}"
       - "HUGO_APPEND_PORT=${HUGO_APPEND_PORT}"
       - "HUGO_BIND=${HUGO_BIND}"
