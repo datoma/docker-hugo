@@ -14,5 +14,11 @@ hugo as docker container
 | HUGO_OPTIONS     | --navigateToChanged --templateMetrics --buildDrafts | some options, see hugo docu for more informations |
 
 ### docker run command
+use the following command to run it as dockerservice:
+
+    docker
 
 ### docker-compose
+edit the .env.sample fiel and start the service with
+
+    docker-compose up -d
