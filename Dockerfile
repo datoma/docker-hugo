@@ -5,7 +5,8 @@ LABEL maintainer='Michael Hoffmann - https://github.com/datoma'
 ENV HUGO_VERSION 0.69.2
 ENV HUGO_PACKAGE hugo_${HUGO_VERSION}_linux-64bit.tar.gz
 ENV HUGO_DIR="/usr/hugo" \
-    HUGO_URL="-b example.de" \
+    HUGO_URL="example.de" \
+    HUGO_PORT="1313"
     HUGO_APPEND_PORT="false" \
     HUGO_BIND="0.0.0.0" \
     HUGO_OPTIONS="--navigateToChanged --templateMetrics --buildDrafts"
@@ -21,6 +22,6 @@ RUN apk update && apk --no-cache add py-pygments bash git asciidoc \
 
 VOLUME ${HUGO_DIR}
 WORKDIR ${HUGO_DIR}
-EXPOSE 1313
+EXPOSE ${HUGO_PORT}
 
-CMD hugo server ${HUGO_URL} --bind ${HUGO_BIND} ${HUGO_OPTIONS}
+CMD hugo server -b ${HUGO_URL} -p ${HUGO_PORT} --bind ${HUGO_BIND} ${HUGO_OPTIONS}
