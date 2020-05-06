@@ -4,12 +4,12 @@ LABEL maintainer='Michael Hoffmann - https://github.com/datoma'
 
 ENV HUGO_VERSION 0.70.0
 ENV HUGO_PACKAGE hugo_${HUGO_VERSION}_linux-64bit.tar.gz
-ENV HUGO_DIR="/usr/hugo" \
-    HUGO_URL="example.de" \
-    HUGO_PORT="1313" \
-    HUGO_APPEND_PORT="false" \
-    HUGO_BIND="0.0.0.0" \
-    HUGO_OPTIONS="--navigateToChanged --templateMetrics --buildDrafts"
+ENV HUGO_DIR /usr/hugo
+ENV HUGO_URL example.de
+ENV HUGO_PORT 1313
+ENV HUGO_APPEND_PORT false
+ENV HUGO_BIND 0.0.0.0
+ENV HUGO_OPTIONS --navigateToChanged --templateMetrics --buildDrafts
 
 ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_PACKAGE} /tmp/
 RUN apk update && apk --no-cache add py-pygments bash git asciidoc \
