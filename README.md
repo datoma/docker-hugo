@@ -4,7 +4,7 @@ hugo as docker container
 ### Default Values
 | Parameter        | Default Value                                       | Description
 | -----------------|-----------------------------------------------------|------------------
-| HUGO_VERSION     | 0.69.2                                              | hugo version (see https://github.com/gohugoio/hugo/releases)|
+| HUGO_VERSION     | 0.70.0                                              | hugo version (see https://github.com/gohugoio/hugo/releases)|
 | HUGO_PACKAGE     | hugo_${HUGO_VERSION}_linux-64bit.tar.gz             | just the internal name for the tar.gz package |
 | HUGO_DIR         | /usr/hugo                                           | directory, where the hugo site is stored |
 | HUGO_URL         | example.de                                          | url for the hugo site |
