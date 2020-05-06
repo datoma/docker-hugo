@@ -11,7 +11,7 @@ services:
       - "HUGO_BIND=${HUGO_BIND}"
       - "HUGO_OPTIONS=${HUGO_OPTIONS}"
     volumes:
-      - "hugo_data:/data"
+      - "hugo_data:/${HUGO_DIR}"
     ports:
       - "1313:1313"
     restart: always
