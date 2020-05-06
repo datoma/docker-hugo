@@ -2,7 +2,7 @@ FROM golang:alpine3.11
 
 LABEL maintainer='Michael Hoffmann - https://github.com/datoma'
 
-ENV HUGO_VERSION 0.69.2
+ENV HUGO_VERSION 0.70.0
 ENV HUGO_PACKAGE hugo_${HUGO_VERSION}_linux-64bit.tar.gz
 ENV HUGO_DIR="/usr/hugo" \
     HUGO_URL="example.de" \
